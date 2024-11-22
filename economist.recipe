@@ -598,11 +598,7 @@ class Economist(BasicNewsRecipe):
             if '/cdn-cgi/image/' not in img['src']:
                 qua = 'economist.com/cdn-cgi/image/width=' + width + ',quality=80,format=auto/'
                 img['src'] = img['src'].replace('economist.com/', qua)
-   compress_news_images = True
-
-
-
-
             else:
                 img['src'] = re.sub(r'width=\d+', 'width=' + width, img['src'])
         return soup
+    compress_news_images = True
