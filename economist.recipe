@@ -642,4 +642,4 @@ class Economist(BasicNewsRecipe):
             else:
                 img['src'] = re.sub(r'width=\d+', 'width=' + width, img['src'])
         return soup
-    compress_news_images = True
+compress_news_images = True
